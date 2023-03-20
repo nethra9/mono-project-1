@@ -1,4 +1,4 @@
-vim security.tf
+
 resource "aws_security_group" "demo-sg" {
 name = "sec-grp"
 description = "it allows ssh and all traffic"
@@ -25,4 +25,5 @@ from_port = 0
 to_port = 0
 protocol = "-1"
 cidr_blocks = ["0.0.0.0/0"]
+}
 }
