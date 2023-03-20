@@ -2,12 +2,8 @@
   action: yum name=git state=present
 - name: install java11
   command: amazon-linux-extras install java-openjdk -y
-- name: install jenkins
-  command: yum install jenkins -y
-- name: restart jenkins
-  service: name=jenkins state=restarted
 - name: install java-1.8.0
-  action: yum name=java-1.8.0-opemjdk state=present
+  action: yum name=java-1.8.0-openjdk state=present
 - name: install maven
   action: yum  name=maven state=present
 
