@@ -1,6 +1,6 @@
 
 resource "aws_security_group" "demo-sg" {
-name = "sec-grp"
+name = "sec-grp-1"
 description = "it allows ssh and all traffic"
 ingress  {
 from_port = 22
