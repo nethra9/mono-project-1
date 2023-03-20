@@ -3,7 +3,7 @@
 - name: install java11
   command: amazon-linux-extras install java-openjdk -y
 - name: install java-1.8.0
-  action: yum name=java-1.8.0-openjdk state=present
+  command: yum install java-1.8.0 -y
 - name: install maven
   action: yum  name=maven state=present
 
