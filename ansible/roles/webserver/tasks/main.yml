@@ -1,0 +1,22 @@
+- name: getting link from dicdn apache
+  get_url:
+    url: apache-tomcat-9.0.72.tar.gz   
+    dest: "/root"
+
+- name: unatr the file
+  command: tar -zxvf apache-tomcat-9.0.71
+
+- name: install java11
+  command: amazon-linux-extras java-openjdk11 -y
+
+- name: edit context.xml
+  template: 
+   src: context.xml
+   dest: /root/tomcta-9.0.71/webapps/META-INF/context.xml
+
+- name: edit tomcat-users.xml
+  src: tomcta-users.xml
+  dest: /root/tomcat-9.0.71/conf/tomcta-users.xml
+
+- name: start tomcat websever
+  shell: nohup /root/tomcat/bin/startup.sh 

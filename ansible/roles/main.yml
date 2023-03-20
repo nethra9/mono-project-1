@@ -1,0 +1,14 @@
+---
+- hosts: aws_ec2
+  user: ec2-user
+  become: yes
+  connection: ssh
+
+  vars:  
+    ansible_ssh_private_key_file: "/etc/ansible/mykeypar.pem"
+    ansible_ssh_user: "ec2-user"
+
+  roles:
+     - dependencies 
+     - webservers
+     - code    

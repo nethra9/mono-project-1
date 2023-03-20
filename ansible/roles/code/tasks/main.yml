@@ -1,0 +1,7 @@
+- name: getting code from devlopers
+  git:
+    repo: "https://github.com/devops0014/one.git"
+    dest: /root/tomcat/webapps/
+    version: master
+
+
